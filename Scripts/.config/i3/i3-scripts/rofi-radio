@@ -4,7 +4,7 @@
 ARGS="--no-video"
 
 notification(){
-# change the icon to whatever you want. Make sure your notification server 
+# change the icon to whatever you want. Make sure your notification server
 # supports it and already configured.
 
 # Now it will receive argument so the user can rename the radio title
@@ -34,7 +34,7 @@ menu(){
 }
 
 main() {
-	
+
 	choice=$(menu | rofi -dmenu | cut -d. -f1)
 
 	case $choice in
@@ -80,7 +80,7 @@ main() {
 	    ADDITIONAL_ARGS=""
 			break
 			;;
-		
+
 		8)
 			notification "WION Live 📰"
             URL="https://youtu.be/lmZRiDMK3OU"
@@ -117,13 +117,13 @@ main() {
 	    ADDITIONAL_ARGS="--volume=60"
 			break
 			;;
-	
+
 
 
 		esac
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    mpv $ARGS --title="radio-mpv" $URL $ADDITIONAL_ARGS
+    mpv $ARGS --title="radio-mpv" --loop-file=inf --loop-playlist=inf $URL $ADDITIONAL_ARGS
 }
 
 pkill -f radio-mpv || main

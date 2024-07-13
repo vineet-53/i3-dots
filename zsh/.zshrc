@@ -1,7 +1,7 @@
- xset r rate 250 30
+xset r rate 250 30
 # Path to your oh-my-zsh installation.
-ZSH=/usr/share/oh-my-zsh/
-export PATH="$PATH:/home/coder/.local/share/bin"
+ZSH=$HOME/.oh-my-zsh/
+# export PATH="$PATH:/home/coder/.local/share/bin"
 
 # Path to powerlevel10k theme
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
