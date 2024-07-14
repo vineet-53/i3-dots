@@ -7,7 +7,7 @@ ZSH=$HOME/.oh-my-zsh/
 # source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 ZSH_THEME="robbyrussell"
 # List of plugins used
-plugins=(git)
+plugins=(git sudo history encode64 copypath zsh-autosuggestions  zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # In case a command is not found, try to find the package that has it
